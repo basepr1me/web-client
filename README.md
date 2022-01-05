@@ -1,6 +1,8 @@
 Free Bee web client
 ===================
-This is the JavaScript-based web client for Free Bee.
+This is the JavaScript-based web client for Free Bee. This index.html file is
+customized as a minimal UI with some bug fixes and tweaks for me and my wife,
+who play daily.
 
 What is Free Bee?
 -----------------
