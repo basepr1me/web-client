@@ -607,7 +607,12 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 		sorted = sortme.replace(/<br\s*[\/]?>/gi, "\n");
 		arr = sorted.split('\n');
 		arrsorted = arr.sort();
-
+		localStorage.clear();
+		for (i = 0; i < found; i++)
+			foundlist.pop();
+		for (i = 0; i < found; i++)
+			foundlist.push(arrsorted[i]);
+		localStorage.setItem("foundwords", JSON.stringify(foundlist));
 		document.getElementById('answers-update').innerHTML = arrsorted.join("<br>");
 	}
 	function shuffle() {
