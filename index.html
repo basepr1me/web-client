@@ -316,6 +316,19 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 		document.getElementById("play7").ontouchend = function() { untype(); };
 		document.getElementById("play7").ontouchcancel = function() { untype(); };
 	}
+	function clearit() {
+		document.getElementById('guess').value='';
+		document.getElementById("no-message").style.display = "inline";
+		document.getElementById("pangram").style.display = "none";
+		document.getElementById("already-found").style.display = "none";
+		document.getElementById("center-letter").style.display = "none";
+		document.getElementById("too-short").style.display = "none";
+		document.getElementById("not-in-list").style.display = "none";
+		document.getElementById("in-list").style.display = "none";
+		document.getElementById("guess-word").style.display = "inline";
+		document.getElementById("guess-word").classList.remove('guess');
+		document.getElementById("guess-word").innerHTML='&nbsp;';
+	}
 	function update_rank() {
 		var rank;
 		if (points >= rank9) {
@@ -694,7 +707,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 		</div>
 	</div>
 	<div class="game-buttons">
-		<button onclick="document.getElementById('guess').value='';">Clear</button>
+		<button onclick="clearit()">Clear</button>
 		<button onclick="shuffle()">Shuffle letters</button>
 		<button onclick="delete_letter()">Delete</button>
 	</div>
